@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smarter Reconciliation | AI-Powered Data Matching</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/index.css">
+    <script src="/static/js/index.js"></script> 
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-robot"></i>
+                <h1>Smarter Reconciliation</h1>
+            </div>
+            <div class="user-actions">
+                <button class="btn btn-outline">
+                    <i class="fas fa-history"></i> History
+                </button>
+                <button class="btn btn-primary">
+                    <i class="fas fa-user"></i> Operator
+                </button>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <div class="sidebar">
+                <div class="sidebar-title">
+                    <i class="fas fa-sliders-h"></i>
+                    <span>Reconciliation Setup</span>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Data Source 1</label>
+                    <select class="form-select">
+                        <option value="">Select source</option>
+                        <option value="db1">Database 1</option>
+                        <option value="db2">Database 2</option>
+                        <option value="file1">CSV File 1</option>
+                        <option value="file2">Excel File 2</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Data Source 2</label>
+                    <select class="form-select">
+                        <option value="">Select source</option>
+                        <option value="db1">Database 1</option>
+                        <option value="db2">Database 2</option>
+                        <option value="file1">CSV File 1</option>
+                        <option value="file2">Excel File 2</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Key Columns</label>
+                    <select class="form-select" multiple>
+                        <option value="id">ID</option>
+                        <option value="transaction_id">Transaction ID</option>
+                        <option value="customer_id">Customer ID</option>
+                        <option value="date">Date</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Criteria Columns</label>
+                    <select class="form-select" multiple>
+                        <option value="amount">Amount</option>
+                        <option value="quantity">Quantity</option>
+                        <option value="status">Status</option>
+                        <option value="currency">Currency</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Derived Columns</label>
+                    <input type="text" class="form-control" placeholder="Enter derived column formula">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Date Range</label>
+                    <div style="display: flex; gap: 10px;">
+                        <input type="date" class="form-control" style="flex: 1;">
+                        <input type="date" class="form-control" style="flex: 1;">
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+
+                <button class="btn btn-primary" style="width: 100%;" id="runReconciliation">
+                    <i class="fas fa-play"></i> Run Reconciliation
+                </button>
+            </div>
+
+            <div class="content-area">
+                <div class="card fade-in">
+                    <div class="card-header">
+                        <div class="card-title">Reconciliation Summary</div>
+                        <div class="status-indicator">
+                            <div class="status-dot dot-success"></div>
+                            <span>Last run: Just now</span>
+                        </div>
+                    </div>
+
+                    <div class="summary-cards">
+                        <div class="summary-card">
+                            <div class="summary-card-value" style="color: var(--success);">1,245</div>
+                            <div class="summary-card-label">Total Records Matched</div>
+                        </div>
+                        <div class="summary-card">
+                            <div class="summary-card-value" style="color: var(--warning);">42</div>
+                            <div class="summary-card-label">Potential Issues</div>
+                        </div>
+                        <div class="summary-card">
+                            <div class="summary-card-value" style="color: var(--danger);">18</div>
+                            <div class="summary-card-label">Critical Anomalies</div>
+                        </div>
+                    </div>
+
+                    <div class="progress-container">
+                        <div class="progress-header">
+                            <span>Reconciliation Progress</span>
+                            <span>98% complete</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 98%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card fade-in">
+                    <div class="tabs">
+                        <div class="tab active" data-tab="anomalies">Anomalies Detected</div>
+                        <div class="tab" data-tab="trends">Trend Analysis</div>
+                        <div class="tab" data-tab="insights">AI Insights</div>
+                    </div>
+
+                    <div class="tab-content active" id="anomalies">
+                        <div class="table-responsive">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Key Value</th>
+                                        <th>Source 1 Value</th>
+                                        <th>Source 2 Value</th>
+                                        <th>Anomaly Type</th>
+                                        <th>AI Comment</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>#1001</td>
+                                        <td>TXN-2023-0456</td>
+                                        <td>$1,250.00</td>
+                                        <td>$1,200.00</td>
+                                        <td><span class="anomaly-type type-mismatch">Value Mismatch</span></td>
+                                        <td>Amount difference detected. Possible fee deduction in source 2.</td>
+                                        <td>
+                                            <button class="btn btn-outline" style="padding: 4px 8px; font-size: 12px;">
+                                                <i class="fas fa-comment"></i> Feedback
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>#1002</td>
+                                        <td>CUST-78945</td>
+                                        <td>Active</td>
+                                        <td>Inactive</td>
+                                        <td><span class="anomaly-type type-mismatch">Status Mismatch</span></td>
+                                        <td>Customer status differs between systems. Check update timing.</td>
+                                        <td>
+                                            <button class="btn btn-outline" style="padding: 4px 8px; font-size: 12px;">
+                                                <i class="fas fa-comment"></i> Feedback
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>#1003</td>
+                                        <td>ORD-45612</td>
+                                        <td>5 items</td>
+                                        <td>Missing</td>
+                                        <td><span class="anomaly-type missing-data">Missing Data</span></td>
+                                        <td>Order not found in source 2. Possible synchronization delay.</td>
+                                        <td>
+                                            <button class="btn btn-outline" style="padding: 4px 8px; font-size: 12px;">
+                                                <i class="fas fa-comment"></i> Feedback
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>#1004</td>
+                                        <td>TXN-2023-0789</td>
+                                        <td>USD</td>
+                                        <td>EUR</td>
+                                        <td><span class="anomaly-type type-mismatch">Currency Mismatch</span></td>
+                                        <td>Different currencies detected. Check FX conversion process.</td>
+                                        <td>
+                                            <button class="btn btn-outline" style="padding: 4px 8px; font-size: 12px;">
+                                                <i class="fas fa-comment"></i> Feedback
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="tab-content" id="trends">
+                        <div class="chart-container">
+                            <!-- Chart will be rendered here -->
+                            <img src="https://docs.oracle.com/en/cloud/saas/account-reconcile-cloud/adarc/img/arcs_dashboard_total_reconciliations_balances_by_account_type.png" alt="Trend Analysis" style="width: 100%; height: 100%; object-fit: cover; border-radius: 6px;">
+                        </div>
+                        <div class="feedback-section">
+                            <h3 style="font-size: 14px; margin-bottom: 10px; color: var(--gray);">AI Trend Analysis Summary</h3>
+                            <p style="font-size: 14px; color: var(--dark); margin-bottom: 15px;">
+                                The anomalies show a weekly pattern with peaks on Mondays. 68% of value mismatches occur within 2 hours of system synchronization. 
+                                Missing data anomalies have decreased by 24% since last month's process improvements.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="tab-content" id="insights">
+                        <div style="background-color: var(--primary-light); padding: 15px; border-radius: 8px; margin-bottom: 15px;">
+                            <h3 style="font-size: 14px; margin-bottom: 10px; color: var(--primary);">AI-Generated Insights</h3>
+                            <p style="font-size: 14px; color: var(--dark);">
+                                Based on historical data and current anomalies, the AI suggests:<br><br>
+                                1. Implement a 15-minute delay in reconciliation for new transactions to account for processing time.<br>
+                                2. Create an exception rule for status changes that occur between 2-3 AM during maintenance windows.<br>
+                                3. 82% of currency mismatches involve EUR-USD pairs - consider adding automatic conversion verification.
+                            </p>
+                        </div>
+                        <div class="feedback-section">
+                            <textarea class="feedback-textarea" placeholder="Provide feedback on these insights or ask the AI a question..."></textarea>
+                            <div class="feedback-actions">
+                                <button class="btn btn-outline">Cancel</button>
+                                <button class="btn btn-primary">Submit Feedback</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
