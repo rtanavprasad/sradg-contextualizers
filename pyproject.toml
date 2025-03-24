@@ -1,0 +1,17 @@
+[project]
+name = "sradg"
+version = "0.1.0"
+description = "Implement an anomaly detection system within the reconciliation process, by leveraging historical data to identify patterns, trends, and expected ranges"
+authors = [
+    {name = "Sugaanth Mohan",email = "sugaanth.mohan@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi[all] (>=0.115.12,<0.116.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

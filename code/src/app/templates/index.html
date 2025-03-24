@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anomaly Detection Tool</title>
+    <link rel="stylesheet" href="/static/css/index.css">
+</head>
+<body>
+    <header>
+        <h1>Anomaly Detection System</h1>
+        <p>Streamlining reconciliation anomaly identification and resolution</p>
+    </header>
+
+    <main>
+
+        <!-- Upload Section -->
+        <div class="upload-container">
+            <div class="lhs-upload-box box-section">
+                <h2>Source Dataset Upload</h2>
+                <input type="file" id="lhs-upload-input" multiple>
+                <button id="lhs-upload-btn">Upload</button>
+            </div>
+            <div class="rhs-upload-box box-section">
+                <h2>Target Dataset Upload</h2>
+                <input type="file" id="rhs-upload-input" multiple>
+                <button id="rhs-upload-btn">Upload</button>
+            </div>
+        </div>
+
+
+
+        <!-- Data Selection Section -->
+        <div class="configure-container">
+            <div class="lhs-configure-box box-section">
+                <h2>Source Dataset Configure</h2>
+                <div class="configure-group">
+                    <label for="lhs-key-columns">Key Columns:</label>
+                    <div class="dropdown-checkbox">
+                        <button class="dropdown-btn" id="lhs-key-dropdown-btn">Select Columns</button>
+                        <div class="dropdown-content">
+                            <label><input type="checkbox" value="Column 1"> Column 1</label>
+                            <label><input type="checkbox" value="Column 2"> Column 2</label>
+                            <label><input type="checkbox" value="Column 3"> Column 3</label>
+                        </div>
+                        <div id="lhs-selected-columns" class="selected-columns"></div>
+                    </div>
+                </div>
+                <div class="configure-group">
+                    <label for="lhs-criteria-columns">Criteria Columns:</label>
+                    <div class="dropdown-checkbox">
+                        <button class="dropdown-btn" id="lhs-criteria-dropdown-btn">Select Columns</button>
+                        <div class="dropdown-content">
+                            <label><input type="checkbox" value="Column A"> Column A</label>
+                            <label><input type="checkbox" value="Column B"> Column B</label>
+                            <label><input type="checkbox" value="Column C"> Column C</label>
+                        </div>
+                        <div id="lhs-criteria-selected" class="selected-columns"></div>
+                    </div>
+                </div>
+                <button id="lhs-analyze-btn">Analyze</button>
+            </div>
+            <div class="rhs-configure-box box-section">
+                <h2>Target Dataset Configure</h2>
+                <div class="configure-group">
+                    <label for="rhs-key-columns">Key Columns:</label>
+                    <div class="dropdown-checkbox">
+                        <button class="dropdown-btn" id="rhs-key-dropdown-btn">Select Columns</button>
+                        <div class="dropdown-content">
+                            <label><input type="checkbox" value="Column 1"> Column 1</label>
+                            <label><input type="checkbox" value="Column 2"> Column 2</label>
+                            <label><input type="checkbox" value="Column 3"> Column 3</label>
+                        </div>
+                        <div id="rhs-selected-columns" class="selected-columns"></div>
+                    </div>
+                </div>
+                <div class="configure-group">
+                    <label for="rhs-criteria-columns">Criteria Columns:</label>
+                    <div class="dropdown-checkbox" id="">
+                        <button class="dropdown-btn" id="rhs-criteria-dropdown-btn">Select Columns</button>
+                        <div class="dropdown-content">
+                            <label><input type="checkbox" value="Column A"> Column A</label>
+                            <label><input type="checkbox" value="Column B"> Column B</label>
+                            <label><input type="checkbox" value="Column C"> Column C</label>
+                        </div>
+                        <div id="rhs-criteria-selected" class="selected-columns"></div>
+                    </div>
+                </div>
+                <button id="rhs-analyze-btn">Analyze</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Anomaly Detection System</p>
+    </footer>
+
+    <script src="/static/js/index.js"></script>
+</body>
+</html>
