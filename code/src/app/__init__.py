@@ -122,3 +122,32 @@ async def get_datasource_columns_list(request: Request):
 
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.post("/RunReconcile", response_class=JSONResponse)
+async def run_data_reconciliation(request: Request):
+
+        data = await request.json()
+
+        print(data)
+
+        data = {
+            "summary" : {
+                "success": "1,245",
+                "PotentialIssue": "42",
+                "CriticalIssue": "18"
+            },
+            "Details": {
+                "AIInsights": [
+                    "Based on historical data and current anomalies, the AI suggests:",
+                    "",
+                    "1. Implement a 15-minute delay in reconciliation for new transactions to account for processing time.",
+                    "2. Create an exception rule for status changes that occur between 2-3 AM during maintenance windows.",
+                    "3. 82% of currency mismatches involve EUR-USD pairs - consider adding automatic conversion verification."
+                ],
+                "AnomaliesDetectedTable": '<table> <thead> <tr> <th>ID</th> <th>Key Value</th> <th>Source 1 Value</th> <th>Source 2 Value</th> <th>Anomaly Type</th> <th>AI Comment</th> <th>Actions</th> </tr> </thead> <tbody> <tr> <td>#1001</td> <td>TXN-2023-0456</td> <td>$1,250.00</td> <td>$1,200.00</td> <td><span class="anomaly-type type-mismatch">Value Mismatch</span></td> <td>Amount difference detected. Possible fee deduction in source 2.</td> <td> <button class="btn btn-outline" style="padding: 4px 8px; font-size: 12px;"> <i class="fas fa-comment"></i> Feedback </button> </td> </tr> <tr> <td>#1002</td> <td>CUST-78945</td> <td>Active</td> <td>Inactive</td> <td><span class="anomaly-type type-mismatch">Status Mismatch</span></td> <td>Customer status differs between systems. Check update timing.</td> <td> <button class="btn btn-outline" style="padding: 4px 8px; font-size: 12px;"> <i class="fas fa-comment"></i> Feedback </button> </td> </tr> <tr> <td>#1003</td> <td>ORD-45612</td> <td>5 items</td> <td>Missing</td> <td><span class="anomaly-type missing-data">Missing Data</span></td> <td>Order not found in source 2. Possible synchronization delay.</td> <td> <button class="btn btn-outline" style="padding: 4px 8px; font-size: 12px;"> <i class="fas fa-comment"></i> Feedback </button> </td> </tr> <tr> <td>#1004</td> <td>TXN-2023-0789</td> <td>USD</td> <td>EUR</td> <td><span class="anomaly-type type-mismatch">Currency Mismatch</span></td> <td>Different currencies detected. Check FX conversion process.</td> <td> <button class="btn btn-outline" style="padding: 4px 8px; font-size: 12px;"> <i class="fas fa-comment"></i> Feedback </button> </td> </tr> </tbody> </table>',
+                "AITrendAnalysisSummary": "The anomalies show a weekly pattern with peaks on Mondays. 68% of value mismatches occur within 2 hours of system synchronization. Missing data anomalies have decreased by 24% since last month's process improvements."
+            }
+        }
+
+        return JSONResponse(content=data)

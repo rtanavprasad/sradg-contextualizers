@@ -11,7 +11,18 @@ document.addEventListener('DOMContentLoaded', function () {
     const DerivedColumns = document.getElementById('derived-columns');
     const HistoricalColumns = document.getElementById('historical-columns');
     const DateColumns = document.getElementById('date-columns');
+    const RunRecon = document.getElementById('runReconciliation');
 
+    // Reporting Summary Counts
+    const SummaryCardSuccessCount = document.getElementById('TotalSuccessCount');
+    const SummaryCardPotentialIssuesCount = document.getElementById('PotentialIssuesCount');
+    const SummaryCardCriticalAnomaliesCount = document.getElementById('CriticalAnomaliesCount');
+    const SummaryCardLastRunTimeStamp = document.getElementById('LastRunTimeStamp');
+
+    // Reporting Data
+    const AnomalyTable = document.getElementById('AnomaliesDetectedTable');
+    const AIInsights = document.getElementById('AIGeneratedInsights');
+    const AITrendSummary = document.getElementById('AITrendSummary');
 
     function update_datasource(Field, Data) {
 
@@ -88,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
 
             // Parse the JSON data
-            const dataSources = await response.json(); // Assuming the response is an array of objects
+            const dataSources = await response.json();
 
             // Update DataSource One
             update_datasource(DataSourceOne, dataSources);
@@ -152,6 +163,136 @@ document.addEventListener('DOMContentLoaded', function () {
         updateInputFieldsOptions(DataSourceOne.value, DataSourceTwo.value);
 
     });
+
+    async function update_ai_insights(aiInsights) {
+
+        let htmlOutput = '';
+
+        // Loop through the AIInsights array to build the HTML string
+        aiInsights.forEach(insight => {
+            if (insight !== "") { // Skip empty strings
+                htmlOutput += `${insight}<br>`;
+            } else {
+                htmlOutput += `<br>`; // Add an extra line break for empty strings
+            }
+        });
+
+        AIInsights.innerHTML = htmlOutput;
+
+    }
+
+    async function update_anomalies_table(content) {
+        AnomalyTable.innerHTML = content;
+    }
+
+    async function update_ai_trend_summary(content) {
+        AITrendSummary.textContent = content;
+    }
+
+    async function update_summary_cards(TotalSuccessCount, PotentialIssuesCount, CriticalAnomaliesCount) {
+
+        // Get the current date and time
+        const now = new Date();
+        const formattedTimestamp = now.toLocaleString(); // Format as a readable string
+
+        SummaryCardSuccessCount.textContent = TotalSuccessCount;
+        SummaryCardPotentialIssuesCount.textContent = PotentialIssuesCount;
+        SummaryCardCriticalAnomaliesCount.textContent = CriticalAnomaliesCount;
+        SummaryCardLastRunTimeStamp.textContent = `Last run: ${formattedTimestamp}`;
+
+    }
+
+    function get_selected_values(current_form) {
+        const selectedValues = Array.from(current_form.selectedOptions).map(option => option.label);
+        return selectedValues;
+    }
+
+    RunRecon.addEventListener('click', async function() {
+
+        // Key Columns Selected & Validation
+        const keyColumnSel = get_selected_values(KeyColumns);
+
+        if ( keyColumnSel.length === 0 || keyColumnSel.some(value => value === "") ) {
+            alert('Please select appropriate Key Columns.');
+            return;
+        }
+
+        // Criteria Columns Selected & Validation
+        const CriteriaColumnSel = get_selected_values(CriteriaColumns);
+
+        if ( CriteriaColumnSel.length === 0 || CriteriaColumnSel.some(value => value === "") ) {
+            alert('Please select appropriate Criteria Columns.');
+            return;
+        }
+
+        // Derived Columns Selection & Validation
+        const DerivedColumnSel = get_selected_values(CriteriaColumns);
+
+        if ( DerivedColumnSel.length === 0 || DerivedColumnSel.some(value => value === "") ) {
+            alert('Please select appropriate Derived Columns.');
+            return;
+        }
+
+        // Historical Columns Selection & Validation
+        const HistoricalColumnSel = get_selected_values(HistoricalColumns);
+
+        if ( HistoricalColumnSel.length === 0 || HistoricalColumnSel.some(value => value === "") ) {
+            alert('Please select appropriate Historical Columns.');
+            return;
+        }
+
+        // Date Columns Selection & Validation
+        const DateColumnSel = get_selected_values(DateColumns);
+
+        if ( DateColumnSel.length === 0 || DateColumnSel.some(value => value === "") ) {
+            alert('Please select appropriate Date Columns.');
+            return;
+        }
+
+
+        let RequestBody = {
+            "KeyColumns": keyColumnSel,
+            "CriteriaColumns": CriteriaColumnSel,
+            "DerivedColumns": DerivedColumnSel,
+            "HistoricalColumns": HistoricalColumnSel,
+            "DateColumns": DateColumnSel
+        }
+
+
+        const response = await fetch('/RunReconcile', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(RequestBody)
+        });
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        // Parse the JSON data
+        const data = await response.json();
+
+        // Update Summary Cards Section
+        await update_summary_cards(
+            data.summary.success,
+            data.summary.PotentialIssue,
+            data.summary.CriticalIssue
+        );
+
+        // Update AI Insights
+        await update_ai_insights(data.Details.AIInsights);
+
+        // Update Anomalies Table
+        await update_anomalies_table(data.Details.AnomaliesDetectedTable);
+
+        // Update AI Trend Analysis Summary
+        await update_ai_trend_summary(data.Details.AITrendAnalysisSummary);
+
+    });
+
+
 });
 
 document.addEventListener('DOMContentLoaded', function() {

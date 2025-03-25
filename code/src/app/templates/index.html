@@ -95,21 +95,21 @@
                         <div class="card-title">Reconciliation Summary</div>
                         <div class="status-indicator">
                             <div class="status-dot dot-success"></div>
-                            <span>Last run: Just now</span>
+                            <span id="LastRunTimeStamp">Last run: - </span>
                         </div>
                     </div>
 
                     <div class="summary-cards">
                         <div class="summary-card">
-                            <div class="summary-card-value" style="color: var(--success);">1,245</div>
+                            <div class="summary-card-value" id="TotalSuccessCount" style="color: var(--success);">0</div>
                             <div class="summary-card-label">Total Records Matched</div>
                         </div>
                         <div class="summary-card">
-                            <div class="summary-card-value" style="color: var(--warning);">42</div>
+                            <div class="summary-card-value" id="PotentialIssuesCount" style="color: var(--warning);">0</div>
                             <div class="summary-card-label">Potential Issues</div>
                         </div>
                         <div class="summary-card">
-                            <div class="summary-card-value" style="color: var(--danger);">18</div>
+                            <div class="summary-card-value" id="CriticalAnomaliesCount" style="color: var(--danger);">0</div>
                             <div class="summary-card-label">Critical Anomalies</div>
                         </div>
                     </div>
@@ -133,74 +133,7 @@
                     </div>
 
                     <div class="tab-content active" id="anomalies">
-                        <div class="table-responsive">
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th>ID</th>
-                                        <th>Key Value</th>
-                                        <th>Source 1 Value</th>
-                                        <th>Source 2 Value</th>
-                                        <th>Anomaly Type</th>
-                                        <th>AI Comment</th>
-                                        <th>Actions</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>#1001</td>
-                                        <td>TXN-2023-0456</td>
-                                        <td>$1,250.00</td>
-                                        <td>$1,200.00</td>
-                                        <td><span class="anomaly-type type-mismatch">Value Mismatch</span></td>
-                                        <td>Amount difference detected. Possible fee deduction in source 2.</td>
-                                        <td>
-                                            <button class="btn btn-outline" style="padding: 4px 8px; font-size: 12px;">
-                                                <i class="fas fa-comment"></i> Feedback
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>#1002</td>
-                                        <td>CUST-78945</td>
-                                        <td>Active</td>
-                                        <td>Inactive</td>
-                                        <td><span class="anomaly-type type-mismatch">Status Mismatch</span></td>
-                                        <td>Customer status differs between systems. Check update timing.</td>
-                                        <td>
-                                            <button class="btn btn-outline" style="padding: 4px 8px; font-size: 12px;">
-                                                <i class="fas fa-comment"></i> Feedback
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>#1003</td>
-                                        <td>ORD-45612</td>
-                                        <td>5 items</td>
-                                        <td>Missing</td>
-                                        <td><span class="anomaly-type missing-data">Missing Data</span></td>
-                                        <td>Order not found in source 2. Possible synchronization delay.</td>
-                                        <td>
-                                            <button class="btn btn-outline" style="padding: 4px 8px; font-size: 12px;">
-                                                <i class="fas fa-comment"></i> Feedback
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>#1004</td>
-                                        <td>TXN-2023-0789</td>
-                                        <td>USD</td>
-                                        <td>EUR</td>
-                                        <td><span class="anomaly-type type-mismatch">Currency Mismatch</span></td>
-                                        <td>Different currencies detected. Check FX conversion process.</td>
-                                        <td>
-                                            <button class="btn btn-outline" style="padding: 4px 8px; font-size: 12px;">
-                                                <i class="fas fa-comment"></i> Feedback
-                                            </button>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                        <div class="table-responsive" id="AnomaliesDetectedTable">
                         </div>
                     </div>
 
@@ -211,9 +144,7 @@
                         </div>
                         <div class="feedback-section">
                             <h3 style="font-size: 14px; margin-bottom: 10px; color: var(--gray);">AI Trend Analysis Summary</h3>
-                            <p style="font-size: 14px; color: var(--dark); margin-bottom: 15px;">
-                                The anomalies show a weekly pattern with peaks on Mondays. 68% of value mismatches occur within 2 hours of system synchronization. 
-                                Missing data anomalies have decreased by 24% since last month's process improvements.
+                            <p style="font-size: 14px; color: var(--dark); margin-bottom: 15px;" id="AITrendSummary">
                             </p>
                         </div>
                     </div>
@@ -221,11 +152,7 @@
                     <div class="tab-content" id="insights">
                         <div style="background-color: var(--primary-light); padding: 15px; border-radius: 8px; margin-bottom: 15px;">
                             <h3 style="font-size: 14px; margin-bottom: 10px; color: var(--primary);">AI-Generated Insights</h3>
-                            <p style="font-size: 14px; color: var(--dark);">
-                                Based on historical data and current anomalies, the AI suggests:<br><br>
-                                1. Implement a 15-minute delay in reconciliation for new transactions to account for processing time.<br>
-                                2. Create an exception rule for status changes that occur between 2-3 AM during maintenance windows.<br>
-                                3. 82% of currency mismatches involve EUR-USD pairs - consider adding automatic conversion verification.
+                            <p style="font-size: 14px; color: var(--dark);" id="AIGeneratedInsights">
                             </p>
                         </div>
                         <div class="feedback-section">
