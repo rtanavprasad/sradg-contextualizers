@@ -35,58 +35,52 @@
 
                 <div class="form-group">
                     <label class="form-label">Data Source 1</label>
-                    <select class="form-select">
-                        <option value="">Select source</option>
-                        <option value="db1">Database 1</option>
-                        <option value="db2">Database 2</option>
-                        <option value="file1">CSV File 1</option>
-                        <option value="file2">Excel File 2</option>
+                    <select class="form-select" id="data-source-one">
                     </select>
                 </div>
 
                 <div class="form-group">
                     <label class="form-label">Data Source 2</label>
-                    <select class="form-select">
-                        <option value="">Select source</option>
-                        <option value="db1">Database 1</option>
-                        <option value="db2">Database 2</option>
-                        <option value="file1">CSV File 1</option>
-                        <option value="file2">Excel File 2</option>
+                    <select class="form-select" id="data-source-two">
                     </select>
                 </div>
 
+                <button class="btn btn-primary" style="width: 100%;" id="submitDataSource">
+                    <i class="fas fa-play"></i> Submit
+                </button>
+
+                <div class="divider"></div>
+
                 <div class="form-group">
                     <label class="form-label">Key Columns</label>
-                    <select class="form-select" multiple>
-                        <option value="id">ID</option>
-                        <option value="transaction_id">Transaction ID</option>
-                        <option value="customer_id">Customer ID</option>
-                        <option value="date">Date</option>
+                    <select class="form-select" multiple id="key-columns" disabled>
                     </select>
                 </div>
 
                 <div class="form-group">
                     <label class="form-label">Criteria Columns</label>
-                    <select class="form-select" multiple>
-                        <option value="amount">Amount</option>
-                        <option value="quantity">Quantity</option>
-                        <option value="status">Status</option>
-                        <option value="currency">Currency</option>
+                    <select class="form-select" multiple id="criteria-columns" disabled>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Historical Columns</label>
+                    <select class="form-select" multiple id="historical-columns" disabled>
                     </select>
                 </div>
 
                 <div class="form-group">
                     <label class="form-label">Derived Columns</label>
-                    <input type="text" class="form-control" placeholder="Enter derived column formula">
+                    <select class="form-select" multiple id="derived-columns" disabled>
+                    </select>
                 </div>
 
                 <div class="form-group">
-                    <label class="form-label">Date Range</label>
-                    <div style="display: flex; gap: 10px;">
-                        <input type="date" class="form-control" style="flex: 1;">
-                        <input type="date" class="form-control" style="flex: 1;">
-                    </div>
+                    <label class="form-label">Date Columns</label>
+                    <select class="form-select" multiple id="date-columns" disabled>
+                    </select>
                 </div>
+
 
                 <div class="divider"></div>
 

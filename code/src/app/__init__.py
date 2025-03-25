@@ -36,3 +36,89 @@ async def index(request: Request):
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
+
+@app.post("/getDataSources", response_class=JSONResponse)
+async def get_data_sources(request: Request):
+
+        data = await request.json()
+
+        print(data)
+
+        data_sources = {
+            "data_sources" : [
+                { "value": "db1", "label": "Database 1" },
+                { "value": "db2", "label": "Database 2" },
+                { "value": "file1", "label": "CSV File 1" },
+                { "value": "file2", "label": "Excel File 2" }
+            ]
+        }
+
+        return JSONResponse(content=data_sources)
+
+
+
+@app.post("/getDataSourceColumnsList", response_class=JSONResponse)
+async def get_datasource_columns_list(request: Request):
+    try:
+
+        data = await request.json()
+
+        data_source_one = data['DataSourceOne']
+        data_source_two = data['DataSourceTwo']
+
+        data_collection = {
+            'db1': [
+                "Company",
+                "Account",
+                "AU",
+                "Currency",
+                "As Of Date",
+                "GL. Balance",
+                "IHub Balance"
+            ],
+            'db2': [
+                "Account",
+                "Secondary Account",
+                "Primary Account",
+                "As Of Date"
+            ],
+            'file1': [
+                "Company",
+                "Account",
+                "AU",
+                "Currency",
+                "As Of Date",
+                "GL. Balance",
+                "IHub Balance"
+            ],
+            'file2': [
+                "Account",
+                "Secondary Account",
+                "Primary Account",
+                "As Of Date"
+            ]
+        }
+
+        dso_columns = data_collection.get(data_source_one)
+        dst_columns = data_collection.get(data_source_two)
+
+        all_columns = list(set(dso_columns + dst_columns))
+
+        json_data = []
+
+        for idx, value in enumerate(all_columns):
+            json_data.append(
+                {
+                    'value': f"{idx}",
+                    'label': f"{value}"
+                }
+            )
+
+        response_content = {
+            'COLUMNS': json_data
+        }
+
+        return JSONResponse(content=response_content)
+
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
