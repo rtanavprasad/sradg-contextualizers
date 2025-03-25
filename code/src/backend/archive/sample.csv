@@ -1,0 +1,6 @@
+id,text
+1,This is the first example text for embedding.
+2,Here is another piece of text to embed.
+3,This is the third example demonstrating how embeddings work.
+4,LangChain makes it easy to work with vector databases.
+5,HuggingFace models are great for generating embeddings.

@@ -1,0 +1,299 @@
+Hourly Date Time,Account Number,GL Balance,Ihub Balance,difference,BranchAU,CompanyCode,Classification,Anomaly
+01-01-2025 00:00,1,4925.066925,5041.991391,-116.9244662,1,44,Balance turned negative,Yes
+01-01-2025 00:00,1,4396.12514,4370.694212,25.43092757,8,13,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 00:00,1,4696.234975,4676.387044,19.84793151,79,43,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 00:00,1,5835.225609,5801.338709,33.88690015,80,7,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 00:00,1,2532.990592,2390.72334,142.2672522,83,33,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 00:00,1,3716.45941,3763.647845,-47.18843546,95,2,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 01:00,1,7403.603394,7467.889717,-64.28632341,1,44,Balance turned negative,Yes
+01-01-2025 01:00,1,5795.450793,5828.262935,-32.81214251,32,42,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 01:00,1,2786.296424,3393.973979,-607.6775551,48,8,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 01:00,1,6270.900812,6227.225031,43.67578052,51,23,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 01:00,1,6325.221881,6348.112871,-22.8909896,52,25,Balance turned negative,Yes
+01-01-2025 01:00,1,7824.764431,7870.574488,-45.81005723,80,7,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 01:00,1,9705.291994,9819.551398,-114.2594039,89,2,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 02:00,1,5894.183434,5906.470472,-12.28703809,1,44,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 02:00,1,9305.299551,9338.47333,-33.1737785,8,13,Balance turned negative,Yes
+01-01-2025 02:00,1,3516.146412,3443.052784,73.09362811,23,33,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 02:00,1,8496.834241,8485.506856,11.32738507,35,38,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 02:00,1,2319.150905,1592.852639,726.2982667,93,43,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 03:00,1,8976.641119,8947.245795,29.39532395,1,44,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 03:00,1,9156.833616,9172.47211,-15.6384943,5,50,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 03:00,1,3057.400323,2998.029886,59.37043682,41,42,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 03:00,1,9279.860488,9369.983651,-90.12316323,59,6,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 03:00,1,2526.949346,3112.016779,-585.0674323,72,35,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 04:00,1,7966.379281,7930.749318,35.62996316,1,44,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 04:00,1,5754.220448,5652.716711,101.5037364,2,6,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 04:00,1,8655.917299,8606.93227,48.98502939,11,6,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 04:00,1,2464.940915,2151.53244,313.4084753,15,44,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 04:00,1,6897.617519,6821.042497,76.57502202,17,6,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 04:00,1,9293.366681,8604.550974,688.8157072,27,7,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 04:00,1,4466.613419,4515.897843,-49.28442455,56,17,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 05:00,1,5119.731124,5175.511516,-55.78039237,1,44,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 05:00,1,2876.496393,3028.441436,-151.9450431,2,6,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 05:00,1,4723.506844,4804.748065,-81.24122111,20,30,Balance turned negative,Yes
+01-01-2025 05:00,1,4830.398641,4819.993975,10.40466575,47,31,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 05:00,1,1213.335169,647.0374304,566.2977387,87,47,Balance turned positive,Yes
+01-01-2025 06:00,1,2795.089428,2814.016051,-18.92662303,1,44,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 06:00,1,4012.231008,4052.013615,-39.78260795,17,6,Balance turned negative,Yes
+01-01-2025 06:00,1,1411.39,1362.477653,48.91234654,23,33,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 06:00,1,6242.292624,6320.672578,-78.37995343,27,7,Balance turned negative,Yes
+01-01-2025 06:00,1,3184.287404,3083.529319,100.7580844,38,47,Balance turned positive,Yes
+01-01-2025 06:00,1,8756.513977,8786.174811,-29.66083448,41,42,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 06:00,1,2816.084233,3289.613883,-473.5296499,66,49,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 06:00,1,8789.125007,8734.343712,54.78129437,74,13,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 06:00,1,8959.448921,9047.881183,-88.43226264,92,22,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 07:00,1,4045.985999,4025.639707,20.34629172,1,44,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 07:00,1,4769.559075,4882.726914,-113.1678392,35,38,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 07:00,1,8562.599324,8631.037853,-68.43852948,50,14,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 07:00,1,3762.801096,4248.154182,-485.3530863,87,47,Balance turned negative,Yes
+01-01-2025 07:00,1,7061.468671,7200.38738,-138.9187088,92,22,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 08:00,1,3113.674823,3099.656762,14.01806083,1,44,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 08:00,1,4753.309374,4936.6404,-183.3310264,8,13,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 08:00,1,5318.053143,5288.395993,29.6571502,11,6,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 08:00,1,1892.903116,2002.559654,-109.6565383,29,13,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 08:00,1,6874.647548,6964.483947,-89.83639899,32,42,Balance turned negative,Yes
+01-01-2025 08:00,1,2272.201806,2871.530116,-599.3283108,87,47,Balance turned negative,Yes
+01-01-2025 08:00,1,2369.320905,2358.962231,10.3586743,98,34,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 09:00,1,9397.012042,9481.758123,-84.74608106,32,42,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 09:00,1,5918.39189,5900.430451,17.96143991,44,33,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 09:00,1,9930.928601,9987.963516,-57.03491517,77,46,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 10:00,1,3666.524228,3644.805981,21.71824748,1,44,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 10:00,1,7527.664594,7638.012455,-110.3478604,5,50,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 10:00,1,4846.515644,4789.647661,56.86798276,32,42,Balance turned positive,Yes
+01-01-2025 10:00,1,6500.578164,6343.017258,157.5609055,54,8,Balance turned positive,Yes
+01-01-2025 10:00,1,7407.151105,7360.583301,46.56780352,65,13,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 10:00,1,7906.76359,7780.617169,126.1464214,95,2,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 11:00,1,4813.001163,4719.46618,93.53498244,1,44,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 11:00,1,8117.748177,8075.685587,42.06258965,2,6,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 11:00,1,7250.990917,7317.38442,-66.39350276,50,14,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 11:00,1,3210.88822,3080.133365,130.7548555,74,13,Balance turned positive,Yes
+01-01-2025 12:00,1,5619.439709,5572.3094,47.13030909,14,24,Balance turned positive,Yes
+01-01-2025 12:00,1,7679.238043,7730.860994,-51.62295187,41,42,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 12:00,1,13160.48487,13084.83564,75.64923463,50,14,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 12:00,1,9222.460182,9273.866038,-51.40585536,73,45,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 12:00,1,6803.559445,6852.348744,-48.78929934,86,19,Balance turned negative,Yes
+01-01-2025 13:00,1,1592.675466,1665.166029,-72.49056328,1,44,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 13:00,1,3103.574003,3186.942764,-83.36876108,8,13,Balance turned negative,Yes
+01-01-2025 13:00,1,7754.328011,7621.065508,133.2625031,32,42,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 13:00,1,2459.347942,2420.50516,38.8427824,41,42,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 13:00,1,8082.699553,8129.059818,-46.36026513,44,33,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 13:00,1,1356.506285,1462.117999,-105.6117139,50,14,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 13:00,1,3179.265728,3111.974134,67.2915941,74,13,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 13:00,1,2881.3612,2974.766234,-93.40503392,80,7,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 13:00,1,1364.430526,1513.120107,-148.6895813,83,33,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 13:00,1,5032.297128,5093.798895,-61.50176713,86,19,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 14:00,1,3033.419923,3104.406384,-70.98646143,11,6,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 14:00,1,9606.154185,9565.614272,40.53991312,35,38,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 14:00,1,8748.089654,8682.941198,65.14845542,41,42,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 14:00,1,3033.390439,3055.966155,-22.57571553,44,33,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 14:00,1,5383.658099,5318.616416,65.04168283,50,14,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 14:00,1,8213.203859,8280.022876,-66.81901659,68,45,Balance turned negative,Yes
+01-01-2025 14:00,1,5520.048748,5585.261645,-65.21289739,74,13,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 14:00,1,3424.557316,3350.222554,74.3347627,80,7,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 14:00,1,8971.203013,9004.599044,-33.39603088,89,2,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 14:00,1,1155.394218,1055.997499,99.39671872,98,34,Balance turned positive,Yes
+01-01-2025 15:00,1,12041.4176,11940.60186,100.8157439,1,44,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 15:00,1,9024.390767,9077.154587,-52.76381965,8,13,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 15:00,1,6227.91866,6413.930696,-186.0120361,41,42,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 15:00,1,1333.250539,1274.257568,58.99297186,56,17,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 15:00,1,3293.223884,3303.406871,-10.18298652,92,22,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 16:00,1,5554.661668,5525.524972,29.13669526,1,44,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 16:00,1,3936.085816,3916.822612,19.26320432,10,45,Balance turned positive,Yes
+01-01-2025 16:00,1,2033.324583,2104.958778,-71.63419522,12,37,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 16:00,1,973.1084824,1015.562576,-42.45409408,13,23,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 16:00,1,3804.311376,3673.817886,130.4934898,20,30,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 16:00,1,4062.707652,3985.060984,77.64666857,47,31,Balance turned positive,Yes
+01-01-2025 16:00,1,2853.658058,2924.126356,-70.46829854,68,45,Balance turned negative,Yes
+01-01-2025 17:00,1,2003.452842,1950.636523,52.81631874,1,44,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 17:00,1,5791.931716,5802.6311,-10.69938436,2,6,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 17:00,1,3717.482783,3800.069921,-82.58713853,5,50,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 17:00,1,5595.859783,5761.872564,-166.0127815,32,42,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 17:00,1,5755.349175,5662.757016,92.59215897,44,33,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 17:00,1,5530.835257,5473.983723,56.85153367,47,31,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 17:00,1,8838.60685,8758.195267,80.41158356,57,5,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 17:00,1,4504.857687,4589.601425,-84.74373728,83,33,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 17:00,1,998.9149567,195.1340486,803.7809081,96,42,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 17:00,1,4129.840366,4277.525491,-147.6851257,98,34,Balance turned negative,Yes
+01-01-2025 18:00,1,5065.670899,5079.669157,-13.99825809,1,44,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 18:00,1,3995.359065,4069.192741,-73.8336761,41,42,Balance turned negative,Yes
+01-01-2025 19:00,1,6456.382973,6285.88128,170.5016926,26,24,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 19:00,1,5767.148015,5850.045403,-82.89738749,38,47,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 19:00,1,7884.983224,7858.067397,26.91582682,77,46,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 19:00,1,7944.976362,7897.5735,47.40286212,80,7,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 20:00,1,5853.236288,5875.157479,-21.92119107,1,44,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 20:00,1,4693.323451,4602.269867,91.05358384,62,31,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 20:00,1,1443.254701,1400.263862,42.99083918,77,46,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 20:00,1,3457.236741,3439.973765,17.26297548,92,22,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 21:00,1,5419.546441,5457.252237,-37.70579558,1,44,Balance turned negative,Yes
+01-01-2025 21:00,1,4279.333059,4303.862158,-24.52909839,11,6,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 21:00,1,6429.087495,6370.094101,58.99339346,12,37,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 21:00,1,4379.522378,4462.652591,-83.13021318,26,24,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 21:00,1,2167.541149,2225.931114,-58.38996486,29,13,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 21:00,1,3807.922881,3730.772137,77.15074489,38,47,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 21:00,1,7467.921382,7394.369917,73.55146489,44,33,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 21:00,1,6036.280684,6008.558848,27.72183588,68,45,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 21:00,1,9016.545483,9089.828244,-73.28276014,77,46,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 21:00,1,1411.222027,1466.729593,-55.50756546,98,34,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 22:00,1,5216.072949,5287.78776,-71.71481063,5,50,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 22:00,1,6756.36103,6791.437298,-35.07626776,11,6,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 22:00,1,5000.317993,5040.744445,-40.42645209,29,13,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 22:00,1,2331.100304,2029.164623,301.9356808,72,35,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 23:00,1,7203.979519,7138.431021,65.5484985,1,44,Sudden spike in Difference due to GL Balance,Yes
+01-01-2025 23:00,1,4477.017548,4344.681167,132.3363805,2,6,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 00:00,2,7031.488582,7113.829806,-82.34122459,1,44,Balance turned negative,Yes
+02-01-2025 00:00,2,9065.768258,8976.913558,88.85469964,5,50,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 00:00,2,9195.321818,8792.911305,402.410513,39,46,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 00:00,2,6596.616012,6528.867587,67.7484242,55,3,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 00:00,2,3580.689425,3532.110103,48.57932168,95,2,Balance turned positive,Yes
+02-01-2025 01:00,2,5277.26955,5402.958591,-125.6890404,32,42,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 01:00,2,5855.22741,5838.513672,16.71373829,41,42,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 01:00,2,6603.543271,6677.533413,-73.99014173,71,21,Balance turned negative,Yes
+02-01-2025 01:00,2,3955.667869,3912.054353,43.61351645,83,33,Balance turned positive,Yes
+02-01-2025 02:00,2,7835.4588,7847.318904,-11.86010344,1,44,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 02:00,2,7220.745822,7142.429105,78.31671695,32,42,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 02:00,2,6695.067043,6781.196086,-86.12904319,50,14,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 02:00,2,2913.311261,2874.07661,39.23465116,53,4,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 02:00,2,6968.152116,7001.214432,-33.06231596,74,13,Balance turned negative,Yes
+02-01-2025 02:00,2,4349.58725,4312.123213,37.46403648,77,46,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 03:00,2,8341.851844,8365.231465,-23.37962146,1,44,Balance turned negative,Yes
+02-01-2025 03:00,2,5210.364659,5197.721376,12.64328345,11,6,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 03:00,2,7639.07023,7664.219351,-25.14912098,32,42,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 03:00,2,2021.929269,1975.861646,46.06762277,68,45,Balance turned positive,Yes
+02-01-2025 03:00,2,1481.834787,1466.772763,15.06202455,83,33,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 03:00,2,3825.793221,3881.762676,-55.96945412,95,2,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 04:00,2,2166.715021,2230.836655,-64.12163346,1,44,Balance turned negative,Yes
+02-01-2025 04:00,2,8610.74152,8530.723036,80.01848394,35,38,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 04:00,2,4169.904618,4071.68481,98.21980847,50,14,Balance turned positive,Yes
+02-01-2025 04:00,2,9243.261379,9151.455596,91.80578323,56,17,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 04:00,2,1100.080274,906.9873048,193.0929694,68,45,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 05:00,2,6762.046061,6711.869913,50.17614798,1,44,Balance turned positive,Yes
+02-01-2025 05:00,2,7107.979223,7202.700633,-94.72141011,5,50,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 05:00,2,1728.690648,1704.226132,24.46451514,65,13,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 06:00,2,1630.555069,1545.764574,84.7904957,23,33,Balance turned positive,Yes
+02-01-2025 06:00,2,6441.800364,6407.292386,34.50797743,32,42,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 06:00,2,5248.930635,5801.869135,-552.9385,87,47,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 06:00,2,6571.200735,6534.307085,36.89364939,94,34,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 07:00,2,1784.844076,2313.83174,-528.9876636,12,37,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 07:00,2,4754.10421,4722.971723,31.13248649,32,42,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 07:00,2,9683.675343,9643.285319,40.39002387,38,47,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 07:00,2,5135.129869,5082.740559,52.38930966,74,13,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 07:00,2,4906.766106,4928.590293,-21.82418666,89,2,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 08:00,2,5480.643426,5415.865159,64.77826723,14,24,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 08:00,2,8205.605369,8178.497528,27.10784146,31,37,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 08:00,2,6053.028478,5949.144603,103.8838745,32,42,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 08:00,2,2751.854796,2911.689405,-159.834609,35,38,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 08:00,2,4690.491758,4621.064807,69.42695033,47,31,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 08:00,2,7944.286831,8424.804011,-480.5171801,87,47,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 09:00,2,6679.622333,6626.962369,52.65996428,1,44,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 09:00,2,9014.513027,8866.17209,148.3409375,2,6,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 09:00,2,10576.51388,10465.40307,111.1108101,11,6,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 09:00,2,8270.990722,8021.43923,249.551492,17,6,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 09:00,2,3242.400999,3191.656193,50.74480586,44,33,Balance turned positive,Yes
+02-01-2025 09:00,2,2890.258728,2922.123782,-31.86505367,47,31,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 09:00,2,3611.57452,3668.357275,-56.7827544,53,4,Balance turned negative,Yes
+02-01-2025 09:00,2,9748.813642,9728.103765,20.70987697,65,13,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 09:00,2,3726.801898,3663.539498,63.26240067,95,2,Balance turned positive,Yes
+02-01-2025 10:00,2,7085.191005,7243.372385,-158.1813801,20,30,Balance turned negative,Yes
+02-01-2025 10:00,2,5033.838211,5007.712035,26.12617587,41,42,Balance turned positive,Yes
+02-01-2025 10:00,2,2156.630208,2218.532102,-61.90189349,47,31,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 10:00,2,1580.132896,1672.724177,-92.59128096,62,31,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 10:00,2,1357.997313,1305.489043,52.50826989,65,13,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 10:00,2,5736.531264,5680.175314,56.35594966,77,46,Balance turned positive,Yes
+02-01-2025 10:00,2,8435.011352,8463.437792,-28.42643997,89,2,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 10:00,2,6722.589359,6664.860897,57.72846198,94,34,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 10:00,2,7790.022267,7890.336,-100.3137328,98,34,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 11:00,2,6163.428783,6200.270465,-36.84168131,1,44,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 11:00,2,9087.171938,9077.062189,10.10974879,2,6,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 11:00,2,2738.540602,2876.482699,-137.9420964,21,30,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 11:00,2,8258.273359,8327.623285,-69.34992599,22,19,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 11:00,2,7080.977966,7101.227362,-20.24939526,53,4,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 11:00,2,3893.539401,3814.62096,78.9184404,56,17,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 11:00,2,7316.442758,7393.296866,-76.85410752,74,13,Balance turned negative,Yes
+02-01-2025 11:00,2,5049.814243,5063.342628,-13.52838527,89,2,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 11:00,2,4678.078152,4739.118958,-61.04080547,95,2,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 12:00,2,4341.624631,4267.490728,74.13390313,1,44,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 12:00,2,6120.219534,6050.772086,69.44744798,2,6,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 12:00,2,1333.254347,1272.307009,60.94733881,35,38,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 12:00,2,2518.752774,2484.497854,34.25492,62,31,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 12:00,2,8234.558746,8153.023439,81.53530734,65,13,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 12:00,2,7823.457787,7795.788153,27.66963385,71,21,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 12:00,2,3136.558619,3332.425476,-195.8668573,89,2,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 13:00,2,3816.806914,3806.424957,10.38195718,1,44,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 13:00,2,3592.73983,3732.768165,-140.0283345,11,6,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 13:00,2,5846.309398,5794.230853,52.07854421,29,13,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 13:00,2,4872.378177,5049.007746,-176.6295681,32,42,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 13:00,2,2634.305641,2813.733955,-179.4283141,35,38,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 13:00,2,4051.770095,3941.397229,110.3728653,38,47,Balance turned positive,Yes
+02-01-2025 13:00,2,4225.865664,4347.121953,-121.2562891,68,45,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 13:00,2,9915.463709,9952.361512,-36.89780302,71,21,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 13:00,2,6824.032678,6873.150533,-49.11785492,80,7,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 14:00,2,1842.231503,1825.32678,16.90472287,2,6,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 14:00,2,7526.067002,7581.649755,-55.5827532,8,13,Balance turned negative,Yes
+02-01-2025 14:00,2,9844.994242,9873.088434,-28.09419171,17,6,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 14:00,2,6986.607023,6517.816017,468.7910057,21,30,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 14:00,2,6367.018083,6309.823059,57.19502315,76,28,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 14:00,2,8932.61149,8813.994845,118.6166444,77,46,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 15:00,2,1166.170281,1111.467935,54.70234621,1,44,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 15:00,2,3164.026244,3200.035233,-36.00898927,29,13,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 15:00,2,5363.202923,5341.308317,21.89460646,46,2,Balance turned positive,Yes
+02-01-2025 15:00,2,3614.331731,3576.929741,37.40198961,50,14,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 15:00,2,2701.054968,2829.265962,-128.2109937,65,13,Sudden spike in Difference due to IHub Balance,Yes
+02-01-2025 15:00,2,4219.321923,4026.194691,193.1272321,74,13,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 15:00,2,9825.14743,9903.983208,-78.83577802,98,34,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 15:00,2,9366.164568,9486.118321,-119.9537524,99,36,Balance turned negative,Yes
+02-01-2025 15:00,2,6483.455874,6563.448936,-79.99306222,100,14,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 16:00,2,3247.5774,3277.510607,-29.93320724,1,44,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 16:00,2,7407.779421,7472.566138,-64.78671717,56,17,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 16:00,2,5847.449542,5928.283411,-80.83386908,95,2,Balance turned negative,Yes
+02-01-2025 17:00,2,9753.795197,9778.799207,-25.00401028,1,44,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 17:00,2,8904.365411,8995.960906,-91.59549443,5,50,Balance turned negative,Yes
+02-01-2025 17:00,2,2988.267911,3019.764795,-31.49688406,44,33,Balance turned negative,Yes
+02-01-2025 17:00,2,4331.213569,4189.667411,141.546158,98,34,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 18:00,2,9742.384755,9656.883418,85.50133715,5,50,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 18:00,2,3626.141125,4423.790645,-797.6495195,63,30,Balance turned negative,Yes
+02-01-2025 19:00,2,6345.706083,6510.397515,-164.6914321,17,6,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 19:00,2,9598.290959,9685.421774,-87.13081427,23,33,Balance turned negative,Yes
+02-01-2025 19:00,2,4522.133012,4418.046191,104.0868207,26,24,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 19:00,2,1068.2371,900.9538581,167.2832421,42,49,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 19:00,2,1893.800529,1945.50175,-51.7012207,83,33,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 19:00,2,1232.278982,1257.480659,-25.2016765,94,34,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 19:00,2,8066.767826,8078.195592,-11.42776594,95,2,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 19:00,2,8229.499429,8352.819196,-123.3197662,98,34,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 20:00,2,9245.916555,9168.217641,77.69891407,1,44,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 20:00,2,7522.568744,7061.067192,461.501552,9,2,Balance turned positive,Yes
+02-01-2025 20:00,2,1920.648412,1874.691177,45.95723498,11,6,Balance turned positive,Yes
+02-01-2025 20:00,2,8865.983788,8716.378902,149.6048861,26,24,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 20:00,2,6875.525915,6821.691387,53.83452877,50,14,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 20:00,2,2095.921726,2178.636805,-82.71507899,62,31,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 20:00,2,9093.154041,9012.440306,80.71373527,65,13,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 20:00,2,3506.502279,4126.457292,-619.9550133,84,16,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 21:00,2,8271.54979,8334.427194,-62.87740413,11,6,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 21:00,2,5835.76965,5751.061469,84.70818067,17,6,Balance turned positive,Yes
+02-01-2025 21:00,2,4991.021781,4074.103288,916.9184929,36,29,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 21:00,2,4869.677868,4975.136726,-105.4588588,56,17,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 21:00,2,6663.246976,6739.727947,-76.48097153,62,31,Balance turned negative,Yes
+02-01-2025 21:00,2,3640.601536,3608.942079,31.65945679,77,46,Balance turned positive,Yes
+02-01-2025 21:00,2,2347.365456,2286.347961,61.01749563,92,22,Balance turned positive,Yes
+02-01-2025 22:00,2,3235.11138,3332.678521,-97.56714179,1,44,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 22:00,2,7836.761409,7963.210914,-126.4495045,2,6,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 22:00,2,1131.135808,1120.039524,11.09628337,10,45,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 22:00,2,3224.98023,3146.941756,78.03847494,20,30,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 22:00,2,1135.734701,1180.978579,-45.24387819,65,13,Balance turned negative,Yes
+02-01-2025 22:00,2,7630.090953,7742.03008,-111.939127,74,13,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 22:00,2,4275.185826,4305.246218,-30.060392,98,34,Balance turned negative,Yes
+02-01-2025 23:00,2,6205.845538,6094.797069,111.0484697,1,44,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 23:00,2,2374.037934,2469.815235,-95.77730132,32,42,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 23:00,2,9767.646743,9789.421933,-21.77518949,68,45,Sudden spike in Difference due to GL Balance,Yes
+02-01-2025 23:00,2,6661.408194,6694.737646,-33.32945229,83,33,Sudden spike in Difference due to GL Balance,Yes
+03-01-2025 00:00,3,9591.77808,9626.090783,-34.31270288,1,44,Balance turned negative,Yes
+03-01-2025 00:00,3,5334.307909,5447.291795,-112.9838861,11,6,Sudden spike in Difference due to GL Balance,Yes
+03-01-2025 00:00,3,7098.95418,7166.939907,-67.98572676,62,31,Sudden spike in Difference due to GL Balance,Yes
+03-01-2025 00:00,3,5804.972629,5859.436606,-54.46397716,65,13,Sudden spike in Difference due to GL Balance,Yes
+03-01-2025 00:00,3,4198.684602,4228.340263,-29.65566114,71,21,Sudden spike in Difference due to GL Balance,Yes
+03-01-2025 00:00,3,4455.51073,4435.723455,19.78727444,83,33,Sudden spike in Difference due to GL Balance,Yes
+03-01-2025 01:00,3,6350.390273,5043.516676,1306.873597,15,44,Balance turned positive,Yes
+03-01-2025 01:00,3,9674.099036,9765.250476,-91.15143983,26,24,Sudden spike in Difference due to GL Balance,Yes
+03-01-2025 01:00,3,4433.828162,4376.537634,57.29052745,56,17,Sudden spike in Difference due to GL Balance,Yes
+03-01-2025 01:00,3,6236.562913,6319.046352,-82.48343867,74,13,Sudden spike in Difference due to GL Balance,Yes
+03-01-2025 01:00,3,6663.080994,6579.475117,83.60587741,77,46,Sudden spike in Difference due to GL Balance,Yes
