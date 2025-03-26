@@ -4,7 +4,7 @@ from langchain.retrievers.self_query.base import SelfQueryRetriever
 from langchain_community.query_constructors.chroma import ChromaTranslator
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_chroma import Chroma
-
+ 
 embeddings = HuggingFaceEmbeddings(model_name="Snowflake/snowflake-arctic-embed-m-long", model_kwargs={'trust_remote_code': True})
 
 # Load the persisted ChromaDB
@@ -14,7 +14,7 @@ vectorstore = Chroma(
 )
 
 retriever = vectorstore.as_retriever(search_type="similarity", 
-                                     search_kwargs={"k": 5000})
+                                     search_kwargs={"k": 8000})
 
 def analyze_without_metadata(llm, QUERY):
     

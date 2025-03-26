@@ -1,11 +1,11 @@
 import os
 import sys
 import json
+import time
 
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_chroma import Chroma
 from langchain_huggingface.embeddings import HuggingFaceEmbeddings
-from langchain_google_genai import ChatGoogleGenerativeAI
 from dotenv import load_dotenv
 
 from extract_details import SUMMARY_PROMPT, AI_INSIGHTS_PROMPT, AI_TREND_ANALYSIS_SUMMARY_PROMPT, ANOMALIES_DETECTED_TABLE_PROMPT
@@ -67,10 +67,17 @@ class Interface:
     # Example usage in the Interface class
     def analyze_CACHE(self):
         summary = self.analyze_with_cache(self.llm, SUMMARY_PROMPT, "summary")
+        print("FINISHED SUMMARY")
+        time.sleep(60)
         ai_insights = self.analyze_with_cache(self.llm, AI_INSIGHTS_PROMPT, "ai_insights")
+        print("FINISHED INSIGHTS")
+        time.sleep(60)
         anomalies_detected_table = self.analyze_with_cache(self.llm, ANOMALIES_DETECTED_TABLE_PROMPT, "anomalies_detected_table")
+        print("FINISHED tables")
+        time.sleep(60)
         ai_trend_analysis_summary = self.analyze_with_cache(self.llm, AI_TREND_ANALYSIS_SUMMARY_PROMPT, "ai_trend_analysis_summary")
         print(summary)
+        print(ai_insights)
         print(anomalies_detected_table)
         print(ai_trend_analysis_summary)
         return {
@@ -95,6 +102,7 @@ class Interface:
                 "AnomaliesDetectedTable": format_response_anomalies_table(anomalies_detected_table)
             }
         }
+    
 if __name__ == "__main__":
     load_dotenv()
     interface = Interface()

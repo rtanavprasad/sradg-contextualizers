@@ -1,3 +1,4 @@
+import os
 import pandas as pd
 from langchain_core.documents import Document
 from langchain_chroma import Chroma
@@ -14,8 +15,18 @@ class VectorDB:
         self.vector_store = None
 
     def load_data(self):
-        csv_file = self.config["data_path"]
-        self.data = pd.read_csv(csv_file)
+        # Initialize an empty DataFrame to hold all data
+        all_data = pd.DataFrame()
+
+        # Iterate through all CSV files in the specified directory
+        for file_name in os.listdir(self.config["data_directory"]):
+            if file_name.endswith(".csv"):
+                file_path = os.path.join(self.config["data_directory"], file_name)
+                print(f"Loading data from: {file_path}")
+                csv_data = pd.read_csv(file_path)
+                all_data = pd.concat([all_data, csv_data], ignore_index=True)
+
+        self.data = all_data
 
     def convert_to_documents(self):
         self.documents = [
@@ -25,6 +36,7 @@ class VectorDB:
             )
             for _, row in self.data.iterrows()
         ]
+        print("MADE ALL DOCUMENTS")
     
     def create_vector_store(self):
         self.load_data()
@@ -38,7 +50,7 @@ class VectorDB:
 
 if __name__ == "__main__":
     vectordb = VectorDB({
-        "data_path": "data/sample.csv",
+        "data_directory": "data",
         "persist_directory": "./chroma_db"
     })
-    vectordb.create_vector_store()
+    vectordb.create_vector_store() 

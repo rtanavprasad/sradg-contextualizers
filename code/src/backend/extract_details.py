@@ -19,13 +19,15 @@ AI_INSIGHTS_PROMPT = """
 Based on the current Anomalies detected in the data, give a list of all remediations that can be done in the data to ensure successful reconciliation.
 
 Output Format (TO BE STRICTLY FOLLOWED):
-<start_response>
+--<start_response>--
 1. Remediation 1
 2. Remediation 2
 3. Remediation 3
-<end_response>
+--<end_response>--
 
 Ensure the output follows this format exactly, with each remediation on a new line, numbered, and no extra words or formatting changes.
+
+the fields <start_response> and <end_response> Must not be changed or removed.
 
 THE RESPONSE SHOULD NOT CONTAIN MORE THAN 3 REMEDIATIONS.
 """
@@ -43,7 +45,7 @@ Output Format (TO BE STRICTLY FOLLOWED):
 
 Ensure the output follows this format exactly.
 
-LIST 2 RECORDS AT MAXIMUM.
+LIST 5 RECORDS AT MAXIMUM.
 """
 
 AI_TREND_ANALYSIS_SUMMARY_PROMPT = """"
@@ -52,11 +54,11 @@ Analyze the entire data and provide the trend analysis summary for the given dat
 A sample answer might be - The anomalies show a weekly pattern with peaks on Mondays. 68% of value mismatches occur within 2 hours of system synchronization. Missing data anomalies have decreased by 24% since last month's process improvements.
 
 OUTPUT FORMAT:
-<start_response>
+--<start_response>--
 Trend Analysis Summary Text
-<end_response>
+--<end_response>--
 
-Ensure the output follows this format exactly.
+Ensure the output follows this format exactly.In the Output Response, the fields --<start_response>-- and --<end_response>-- MUST not be changed or removed.
 """
 
 def format_response_summary(response):
@@ -77,8 +79,8 @@ def format_response_summary(response):
 
 def format_response_ai_insights(response):
     # Extract the content between <start_response> and <end_response>
-    start_tag = "<start_response>"
-    end_tag = "<end_response>"
+    start_tag = "--<start_response>--"
+    end_tag = "--<end_response>--"
     
     # Find the start and end indices
     start_index = response.find(start_tag) + len(start_tag)
@@ -116,8 +118,8 @@ def format_response_anomalies_table(response):
 
 def format_response_trend_analysis(response):
     # Extract the content between <start_response> and <end_response>
-    start_tag = "<start_response>"
-    end_tag = "<end_response>"
+    start_tag = "--<start_response>--"
+    end_tag = "--<end_response>--"
     
     # Find the start and end indices
     start_index = response.find(start_tag) + len(start_tag)
