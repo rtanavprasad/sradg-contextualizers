@@ -36,49 +36,53 @@ Briefly outline the technologies, frameworks, and tools used in development.
 Describe the major technical or non-technical challenges your team encountered.
 
 ## 🏃 How to Run
+0. Create Google API Studio API Key:
+   - 🔹 URL: [Create API Key](https://aistudio.google.com/apikey?pli=1)
+---
 1. Clone the repository  
    ```sh
    git clone https://github.com/ewfx/sradg-contextualizers --branch FinalRelease .
    ```
-
+---
 2. Download Python Version Between >= 3.10,<3.11 
    - 🔹 Download URL: [Download Python](https://www.python.org/downloads/)
-
+---
 3. Validate the python Version
    ```sh
    python --version
    ```
-
+---
 4. Create the Virtual Environment   
    ```sh
    python -m venv .venv 
    ```
-   
+---
 5. Activate Virtual Environment
 - 🔹 Windows:
    ```sh
    .venv\Scripts\activate
    ```
+
 - 🔹 Mac:
    ```sh
    source .venv/bin/activate
    ```
-  
+---
 6. Install Poetry
    ```sh
    python -m pip install poetry
    ```
-   
+---
 7. Install Dependencies (Same Directory/Folder as Git ROOT)
    ```sh
    poetry install 
    ```
-   
+---
 8. Run Application (Same Directory/Folder as Git ROOT)   
    ```sh
    poetry run uvicorn code.src.app:app --port 8000 --workers 4
    ```
-   
+---
 9. Open URL in Browser:
    ```sh
    http://127.0.0.1:8000
