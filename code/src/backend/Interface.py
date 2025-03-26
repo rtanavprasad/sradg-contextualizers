@@ -1,5 +1,6 @@
 import os
 import sys
+import json
 
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_chroma import Chroma
@@ -7,7 +8,8 @@ from langchain_huggingface.embeddings import HuggingFaceEmbeddings
 from langchain_google_genai import ChatGoogleGenerativeAI
 from dotenv import load_dotenv
 
-from extract_details import SUMMARY_PROMPT
+from extract_details import SUMMARY_PROMPT, AI_INSIGHTS_PROMPT, AI_TREND_ANALYSIS_SUMMARY_PROMPT, ANOMALIES_DETECTED_TABLE_PROMPT
+from extract_details import format_response_summary, format_response_ai_insights, format_response_anomalies_table, format_response_trend_analysis
 from analyze import analyze_without_metadata
 
 PROJECT_DIR = os.path.dirname(__file__)
@@ -24,6 +26,8 @@ sys.path.extend([ROOT_DIR])
 gemini_api_key = os.getenv("GEMINI_API_KEY")
 os.environ["GOOGLE_API_KEY"] = gemini_api_key
 
+CACHE_FILE = "response_cache.json"
+
 class Interface:
     def __init__(self):
         self.llm = ChatGoogleGenerativeAI(
@@ -34,37 +38,66 @@ class Interface:
             top_k=40,
             max_output_tokens=2048,
         )
-        CHROMA_PATH = "./chroma"
+        CHROMA_PATH = "./chroma_db"
         self.embedding_function = HuggingFaceEmbeddings(model_name="Snowflake/snowflake-arctic-embed-m-long", \
                                                     model_kwargs={'trust_remote_code': True})
         self.db = Chroma(persist_directory=CHROMA_PATH, embedding_function=self.embedding_function)
-    
-    def analyze(self, QUERY):
-        # Output format
-        # data = {
-        #     "summary" : {
-        #         "success": "1,245",
-        #         "PotentialIssue": "42",
-        #         "CriticalIssue": "18"
-        #     },
-        #     "Details": {
-        #         "AIInsights": [
-        #             "Based on historical data and current anomalies, the AI suggests:",
-        #             "",
-        #             "1. Implement a 15-minute delay in reconciliation for new transactions to account for processing time.",
-        #             "2. Create an exception rule for status changes that occur between 2-3 AM during maintenance windows.",
-        #             "3. 82% of currency mismatches involve EUR-USD pairs - consider adding automatic conversion verification."
-        #         ],
-        #         "AnomaliesDetectedTable": '<table> <thead> <tr> <th>ID</th> <th>Key Value</th> <th>Source 1 Value</th> <th>Source 2 Value</th> <th>Anomaly Type</th> <th>AI Comment</th> <th>Actions</th> </tr> </thead> <tbody> <tr> <td>#1001</td> <td>TXN-2023-0456</td> <td>$1,250.00</td> <td>$1,200.00</td> <td><span class="anomaly-type type-mismatch">Value Mismatch</span></td> <td>Amount difference detected. Possible fee deduction in source 2.</td> <td> <button class="btn btn-outline" style="padding: 4px 8px; font-size: 12px;"> <i class="fas fa-comment"></i> Feedback </button> </td> </tr> <tr> <td>#1002</td> <td>CUST-78945</td> <td>Active</td> <td>Inactive</td> <td><span class="anomaly-type type-mismatch">Status Mismatch</span></td> <td>Customer status differs between systems. Check update timing.</td> <td> <button class="btn btn-outline" style="padding: 4px 8px; font-size: 12px;"> <i class="fas fa-comment"></i> Feedback </button> </td> </tr> <tr> <td>#1003</td> <td>ORD-45612</td> <td>5 items</td> <td>Missing</td> <td><span class="anomaly-type missing-data">Missing Data</span></td> <td>Order not found in source 2. Possible synchronization delay.</td> <td> <button class="btn btn-outline" style="padding: 4px 8px; font-size: 12px;"> <i class="fas fa-comment"></i> Feedback </button> </td> </tr> <tr> <td>#1004</td> <td>TXN-2023-0789</td> <td>USD</td> <td>EUR</td> <td><span class="anomaly-type type-mismatch">Currency Mismatch</span></td> <td>Different currencies detected. Check FX conversion process.</td> <td> <button class="btn btn-outline" style="padding: 4px 8px; font-size: 12px;"> <i class="fas fa-comment"></i> Feedback </button> </td> </tr> </tbody> </table>',
-        #         "AITrendAnalysisSummary": "The anomalies show a weekly pattern with peaks on Mondays. 68% of value mismatches occur within 2 hours of system synchronization. Missing data anomalies have decreased by 24% since last month's process improvements."
-        #     }
-        # }
 
-        summary = analyze_without_metadata(self.llm, QUERY)
+    def load_cache(self):
+        if os.path.exists(CACHE_FILE):
+            with open(CACHE_FILE, "r") as f:
+                return json.load(f)
+        return {}
+
+    def save_cache(self, cache):
+        with open(CACHE_FILE, "w") as f:
+            json.dump(cache, f)
+
+    def analyze_with_cache(self, llm, prompt, cache_key):
+        cache = self.load_cache()
+        if cache_key in cache:
+            print(f"Using cached response for {cache_key}")
+            return cache[cache_key]
+        
+        response = analyze_without_metadata(llm, prompt)
+        cache[cache_key] = response
+        self.save_cache(cache)
+        return response
+
+    # Example usage in the Interface class
+    def analyze_CACHE(self):
+        summary = self.analyze_with_cache(self.llm, SUMMARY_PROMPT, "summary")
+        ai_insights = self.analyze_with_cache(self.llm, AI_INSIGHTS_PROMPT, "ai_insights")
+        anomalies_detected_table = self.analyze_with_cache(self.llm, ANOMALIES_DETECTED_TABLE_PROMPT, "anomalies_detected_table")
+        ai_trend_analysis_summary = self.analyze_with_cache(self.llm, AI_TREND_ANALYSIS_SUMMARY_PROMPT, "ai_trend_analysis_summary")
         print(summary)
-
+        print(anomalies_detected_table)
+        print(ai_trend_analysis_summary)
+        return {
+            "summary": format_response_summary(summary),
+            "Details": {
+                "AIInsights": format_response_ai_insights(ai_insights),
+                "AnomaliesDetectedTable": format_response_anomalies_table(anomalies_detected_table),
+                "AITrendAnalysisSummary": format_response_trend_analysis(ai_trend_analysis_summary)
+            }
+        }
+    
+    def analyze(self):
+        summary = analyze_without_metadata(self.llm, SUMMARY_PROMPT)
+        ai_insights = analyze_without_metadata(self.llm, AI_INSIGHTS_PROMPT)
+        anomalies_detected_table = analyze_without_metadata(self.llm, ANOMALIES_DETECTED_TABLE_PROMPT)
+        print(summary)
+        print(anomalies_detected_table)
+        return {
+            "summary": format_response_summary(summary),
+            "Details": {
+                "AIInsights": format_response_ai_insights(ai_insights),
+                "AnomaliesDetectedTable": format_response_anomalies_table(anomalies_detected_table)
+            }
+        }
 if __name__ == "__main__":
     load_dotenv()
     interface = Interface()
 
-    interface.analyze(QUERY=SUMMARY_PROMPT)
+    answers = interface.analyze_CACHE()
+    print(answers)
