@@ -78,12 +78,17 @@ Describe the major technical or non-technical challenges your team encountered.
    poetry install 
    ```
 ---
-8. Run Application (Same Directory/Folder as Git ROOT)   
+8. Create Vector Database (Same Directory/Folder as Git ROOT)   
+   ```sh
+   python code/src/backend/create_vector_db.py
+   ```
+---
+9. Run Application (Same Directory/Folder as Git ROOT)   
    ```sh
    poetry run uvicorn code.src.app:app --port 8000 --workers 4
    ```
 ---
-9. Open URL in Browser:
+10. Open URL in Browser:
    ```sh
    http://127.0.0.1:8000
    ```

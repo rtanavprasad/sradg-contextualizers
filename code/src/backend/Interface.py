@@ -6,11 +6,8 @@ import time
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_chroma import Chroma
 from langchain_huggingface.embeddings import HuggingFaceEmbeddings
-from dotenv import load_dotenv
+from dotenv import load_dotenv, find_dotenv
 
-from extract_details import SUMMARY_PROMPT, AI_INSIGHTS_PROMPT, AI_TREND_ANALYSIS_SUMMARY_PROMPT, ANOMALIES_DETECTED_TABLE_PROMPT
-from extract_details import format_response_summary, format_response_ai_insights, format_response_anomalies_table, format_response_trend_analysis
-from analyze import analyze_without_metadata
 
 PROJECT_DIR = os.path.dirname(__file__)
 ROOT_DIR = os.path.abspath(
@@ -20,8 +17,20 @@ ROOT_DIR = os.path.abspath(
         os.pardir
     )
 )
+ENVKEY_DIRECTORY = os.path.abspath(
+    os.path.join(
+        ROOT_DIR,
+
+    )
+)
 
 sys.path.extend([ROOT_DIR])
+
+from src.backend.extract_details import SUMMARY_PROMPT, AI_INSIGHTS_PROMPT, AI_TREND_ANALYSIS_SUMMARY_PROMPT, ANOMALIES_DETECTED_TABLE_PROMPT
+from src.backend.extract_details import format_response_summary, format_response_ai_insights, format_response_anomalies_table, format_response_trend_analysis
+from src.backend.analyze import analyze_without_metadata
+
+load_dotenv(find_dotenv())
 
 gemini_api_key = os.getenv("GEMINI_API_KEY")
 os.environ["GOOGLE_API_KEY"] = gemini_api_key
@@ -91,20 +100,30 @@ class Interface:
     
     def analyze(self):
         summary = analyze_without_metadata(self.llm, SUMMARY_PROMPT)
+        print("FINISHED SUMMARY")
+        time.sleep(60)
         ai_insights = analyze_without_metadata(self.llm, AI_INSIGHTS_PROMPT)
+        print("FINISHED INSIGHTS")
+        time.sleep(60)
         anomalies_detected_table = analyze_without_metadata(self.llm, ANOMALIES_DETECTED_TABLE_PROMPT)
+        print("FINISHED tables")
+        time.sleep(60)
+        ai_trend_analysis_summary = analyze_without_metadata(self.llm, AI_TREND_ANALYSIS_SUMMARY_PROMPT)
         print(summary)
         print(anomalies_detected_table)
+        print(ai_trend_analysis_summary)
         return {
             "summary": format_response_summary(summary),
             "Details": {
                 "AIInsights": format_response_ai_insights(ai_insights),
-                "AnomaliesDetectedTable": format_response_anomalies_table(anomalies_detected_table)
+                "AnomaliesDetectedTable": format_response_anomalies_table(anomalies_detected_table),
+                "AITrendAnalysisSummary": format_response_trend_analysis(ai_trend_analysis_summary)
             }
         }
     
 if __name__ == "__main__":
-    load_dotenv()
+    print(ROOT_DIR)
+    load_dotenv(find_dotenv(ROOT_DIR))
     interface = Interface()
 
     answers = interface.analyze_CACHE()

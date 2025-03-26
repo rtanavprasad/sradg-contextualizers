@@ -1,10 +1,35 @@
+import sys
 import os
 import pandas as pd
 from langchain_core.documents import Document
 from langchain_chroma import Chroma
 from langchain_huggingface import HuggingFaceEmbeddings
 
-from extract_meta_data import extract_meta_data, extract_documents
+
+PROJECT_DIR = os.path.dirname(__file__)
+ROOT_DIR = os.path.abspath(
+    os.path.join(
+        PROJECT_DIR,
+        os.pardir,
+        os.pardir
+    )
+)
+DATA_DIR = os.path.abspath(
+    os.path.join(
+        PROJECT_DIR,
+        "data"
+    )
+)
+CHROMA_DB = os.path.abspath(
+    os.path.join(
+        PROJECT_DIR,
+        "chroma_db"
+    )
+)
+
+sys.path.extend([ROOT_DIR])
+
+from src.backend.extract_meta_data import extract_meta_data, extract_documents
 
 class VectorDB:
     def __init__(self, config):
@@ -50,7 +75,7 @@ class VectorDB:
 
 if __name__ == "__main__":
     vectordb = VectorDB({
-        "data_directory": "data",
-        "persist_directory": "./chroma_db"
+        "data_directory": DATA_DIR,
+        "persist_directory": CHROMA_DB
     })
     vectordb.create_vector_store() 
