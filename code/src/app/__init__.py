@@ -30,8 +30,6 @@ app.mount("/static", StaticFiles(directory=static_path), name="static")
 # ADD TEMPLATES PATH
 templates = Jinja2Templates(directory=template_path)
 
-INF = Interface()
-
 @app.get("/", response_class=HTMLResponse)
 @app.get("/index", response_class=HTMLResponse)
 async def index(request: Request):
@@ -130,6 +128,7 @@ async def get_datasource_columns_list(request: Request):
 
 @app.post("/RunReconcile", response_class=JSONResponse)
 async def run_data_reconciliation(request: Request):
+        INF = Interface()
 
         data = await request.json()
 
