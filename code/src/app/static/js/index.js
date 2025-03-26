@@ -8,8 +8,6 @@ document.addEventListener('DOMContentLoaded', function () {
     // GET INPUT FIELDS
     const KeyColumns = document.getElementById('key-columns');
     const CriteriaColumns = document.getElementById('criteria-columns');
-    const DerivedColumns = document.getElementById('derived-columns');
-    const HistoricalColumns = document.getElementById('historical-columns');
     const DateColumns = document.getElementById('date-columns');
     const RunRecon = document.getElementById('runReconciliation');
 
@@ -73,8 +71,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
         update_input_fields(KeyColumns, columns);
         update_input_fields(CriteriaColumns, columns);
-        update_input_fields(DerivedColumns, columns);
-        update_input_fields(HistoricalColumns, columns);
         update_input_fields(DateColumns, columns);
 
     }
@@ -127,16 +123,12 @@ document.addEventListener('DOMContentLoaded', function () {
     function DisableInputFields() {
         KeyColumns.disabled = true;
         CriteriaColumns.disabled = true;
-        DerivedColumns.disabled = true;
-        HistoricalColumns.disabled = true;
         DateColumns.disabled = true;
     }
 
     function EnableInputFields() {
         KeyColumns.disabled = false;
         CriteriaColumns.disabled = false;
-        DerivedColumns.disabled = false;
-        HistoricalColumns.disabled = false;
         DateColumns.disabled = false;
     }
 
@@ -225,21 +217,6 @@ document.addEventListener('DOMContentLoaded', function () {
             return;
         }
 
-        // Derived Columns Selection & Validation
-        const DerivedColumnSel = get_selected_values(CriteriaColumns);
-
-        if ( DerivedColumnSel.length === 0 || DerivedColumnSel.some(value => value === "") ) {
-            alert('Please select appropriate Derived Columns.');
-            return;
-        }
-
-        // Historical Columns Selection & Validation
-        const HistoricalColumnSel = get_selected_values(HistoricalColumns);
-
-        if ( HistoricalColumnSel.length === 0 || HistoricalColumnSel.some(value => value === "") ) {
-            alert('Please select appropriate Historical Columns.');
-            return;
-        }
 
         // Date Columns Selection & Validation
         const DateColumnSel = get_selected_values(DateColumns);
@@ -253,8 +230,6 @@ document.addEventListener('DOMContentLoaded', function () {
         let RequestBody = {
             "KeyColumns": keyColumnSel,
             "CriteriaColumns": CriteriaColumnSel,
-            "DerivedColumns": DerivedColumnSel,
-            "HistoricalColumns": HistoricalColumnSel,
             "DateColumns": DateColumnSel
         }
 

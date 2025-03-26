@@ -1,4 +1,4 @@
-# 🚀 Project Name
+# 🚀 SMARTER RECONCILIATION
 
 ## 📌 Table of Contents
 - [Introduction](#introduction)
@@ -17,11 +17,11 @@
 A brief overview of your project and its purpose. Mention which problem statement are your attempting to solve. Keep it concise and engaging.
 
 ## 🎥 Demo
-🔗 [Live Demo](#) (if applicable)  
-📹 [Video Demo](#) (if applicable)  
+📹 [Video Demo](./artifacts/demo/Video.mp4) (if applicable)  
+
 🖼️ Screenshots:
 
-![Screenshot 1](link-to-image)
+![Screenshot 1](./artifacts/arch/UI.png)
 
 ## 💡 Inspiration
 What inspired you to create this project? Describe the problem you're solving.
@@ -38,23 +38,63 @@ Describe the major technical or non-technical challenges your team encountered.
 ## 🏃 How to Run
 1. Clone the repository  
    ```sh
-   git clone https://github.com/your-repo.git
+   git clone https://github.com/ewfx/sradg-contextualizers --branch FinalRelease .
    ```
-2. Install dependencies  
+
+2. Download Python Version Between >= 3.10,<3.11 
+   - 🔹 Download URL: [Download Python](https://www.python.org/downloads/)
+
+3. Validate the python Version
    ```sh
-   npm install  # or pip install -r requirements.txt (for Python)
+   python --version
    ```
-3. Run the project  
+
+4. Create the Virtual Environment   
    ```sh
-   npm start  # or python app.py
+   python -m venv .venv 
    ```
+   
+5. Activate Virtual Environment
+- 🔹 Windows:
+   ```sh
+   .venv\Scripts\activate
+   ```
+- 🔹 Mac:
+   ```sh
+   source .venv/bin/activate
+   ```
+  
+6. Install Poetry
+   ```sh
+   python -m pip install poetry
+   ```
+   
+7. Install Dependencies (Same Directory/Folder as Git ROOT)
+   ```sh
+   poetry install 
+   ```
+   
+8. Run Application (Same Directory/Folder as Git ROOT)   
+   ```sh
+   poetry run uvicorn code.src.app:app --port 8000 --workers 4
+   ```
+   
+9. Open URL in Browser:
+   ```sh
+   http://127.0.0.1:8000
+   ```
+
+
 
 ## 🏗️ Tech Stack
-- 🔹 Frontend: React / Vue / Angular
-- 🔹 Backend: Node.js / FastAPI / Django
-- 🔹 Database: PostgreSQL / Firebase
-- 🔹 Other: OpenAI API / Twilio / Stripe
+- 🔹 Frontend & Backend: FastAPI / Vanilla (HTML, CSS, JS)
+- 🔹 Backend: FastAPI
+- 🔹 Vector Database: Chroma DB
+- 🔹 AI Model: GoogleGenerativeAI / gemini-2.0-flash
+- 🔹 Embeddings Model: HuggingFaceEmbeddings / snowflake-arctic-embed-m-long
 
 ## 👥 Team
-- **Your Name** - [GitHub](#) | [LinkedIn](#)
-- **Teammate 2** - [GitHub](#) | [LinkedIn](#)
+- **Sugaanth Mohan** - [GitHub](https://github.com/SugaanthMohan) |[LinkedIn](#) 
+- **Karthik S** - [GitHub](https://github.com/karthiksenthil2803) | [LinkedIn](#)
+- **Gowsiman AR** - [GitHub](https://github.com/gowsiman) | [LinkedIn](#)
+- **Krishna** - [GitHub](https://github.com/rtanavprasad) | [LinkedIn](#)
